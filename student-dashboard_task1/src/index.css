@@ -1,0 +1,106 @@
+:root {
+  --text: #4a4a4e;
+  --text-h: #1a1a1c;
+  --bg: #fafaf9;
+  --border: rgba(0, 0, 0, 0.08);
+  --code-bg: #f1f1ef;
+  --accent: #6366f1;
+  --accent-bg: rgba(99, 102, 241, 0.08);
+  --accent-border: rgba(99, 102, 241, 0.2);
+  --social-bg: rgba(0, 0, 0, 0.03);
+  --shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.08);
+  --sans: "Inter Tight", "Instrument Sans", system-ui, sans-serif;
+  --heading: "Plus Jakarta Sans", system-ui, sans-serif;
+  --mono: "JetBrains Mono", "SF Mono", monospace;
+
+  font: 17px/1.6 var(--sans);
+  letter-spacing: -0.01em;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #a1a1aa;
+    --text-h: #f4f4f5;
+    --bg: #09090b;
+    --border: rgba(255, 255, 255, 0.08);
+    --code-bg: #18181b;
+    --accent: #818cf8;
+    --accent-bg: rgba(129, 140, 248, 0.1);
+    --accent-border: rgba(129, 140, 248, 0.3);
+    --social-bg: rgba(255, 255, 255, 0.03);
+    --shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: left;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  color: var(--text-h);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 80px 0 32px;
+  background: linear-gradient(
+    180deg,
+    var(--text-h) 60%,
+    rgba(var(--text-h), 0.5)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 48px 0 16px;
+}
+
+p {
+  margin-bottom: 24px;
+  max-width: 65ch;
+}
+
+code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  padding: 0.2em 0.5em;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--accent);
+}
