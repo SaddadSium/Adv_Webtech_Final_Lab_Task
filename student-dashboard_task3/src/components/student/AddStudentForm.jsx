@@ -58,7 +58,7 @@ const AddStudentForm = () => {
           .split(",")
           .map((c) => ({
             name: c.trim(),
-            color: `#${Math.floor(Math.random() * 16777215).toString(16)}`, // Random color
+            color: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
           }))
           .filter((c) => c.name !== ""),
       };

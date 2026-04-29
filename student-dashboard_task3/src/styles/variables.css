@@ -1,13 +1,11 @@
 :root {
-  /* Common Variables */
   --primary: #6366f1;
   --accent-primary: #6366f1;
   --primary-hover: #4f46e5;
   --primary-light: #e0e7ff;
   --secondary: #ec4899;
   --accent: #8b5cf6;
-
-  /* Light Theme (Default) */
+  
   --bg-main: #f8fafc;
   --bg-card: #ffffff;
   --text-main: #0f172a;
