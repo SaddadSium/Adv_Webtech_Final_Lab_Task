@@ -7,7 +7,6 @@
   --border: rgba(226, 232, 240, 0.8);
 }
 
-/* Overlap fix and modern card base */
 .student-card {
   background: var(--bg-card);
   -webkit-backdrop-filter: blur(10px);
@@ -28,17 +27,16 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
-/* Top Section: Avatar + Name */
 .card-top {
   display: flex;
-  align-items: center; /* Changed to horizontal for better space */
+  align-items: center;
   gap: 16px;
 }
 
 .student-avatar {
   width: 60px;
   height: 60px;
-  border-radius: 18px; /* Squircle style */
+  border-radius: 18px;
   border: 2px solid #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
@@ -50,10 +48,9 @@
   color: var(--text-main);
 }
 
-/* FIXED: Bento-style Stats Section (No Overlap) */
 .card-stats {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Equal space distribution */
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
   background: var(--bg-inner);
   padding: 16px;
@@ -80,7 +77,6 @@
   color: var(--accent);
 }
 
-/* Clean Tags */
 .tags-grid {
   display: flex;
   flex-wrap: wrap;
@@ -97,7 +93,6 @@
   color: var(--text-main);
 }
 
-/* Button Refinement */
 .btn-view {
   width: 100%;
   padding: 12px;
@@ -115,7 +110,6 @@
   box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.3);
 }
 
-/* Favorite button positioning */
 .favorite-btn {
   position: absolute;
   top: 15px;
