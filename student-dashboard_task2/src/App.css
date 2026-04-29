@@ -1,0 +1,112 @@
+:root {
+  /* Ultra-Minimal Paper Palette */
+  --bg-main: #fcfcf9; /* Chalky Warm White */
+  --bg-card: #ffffff;
+  --text-main: #121212; /* Deep Charcoal */
+  --text-muted: #717171;
+  --accent: #2d332d; /* Stone/Forest Greenish Black */
+  --border: #e8e8e1; /* Light Paper Border */
+
+  --radius: 8px; /* Shaper, more professional */
+  --spacing: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #111111;
+    --bg-card: #181818;
+    --text-main: #e4e4e4;
+    --text-muted: #888888;
+    --accent: #ffffff;
+    --border: #2a2a2a;
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-content {
+  padding: var(--spacing) 2rem;
+  max-width: 960px; /* Aro compact look er jonno */
+  margin: 0 auto;
+}
+
+/* Header - Clean & Quiet */
+.content-header {
+  margin-bottom: 4rem;
+}
+
+.content-header h2 {
+  font-size: 2rem;
+  font-weight: 500; /* Bold noy, medium weight */
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.content-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  font-weight: 400;
+}
+
+/* Controls - Subdued */
+.controls-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1rem;
+}
+
+/* Minimalist Grid (No heavy shadows) */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.grid-container > * {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle Hover - Sudhu border ektu deep hobe */
+.grid-container > *:hover {
+  border-color: var(--text-main);
+  background-color: var(--bg-main);
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 2rem 1.25rem;
+  }
+
+  .content-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .controls-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
